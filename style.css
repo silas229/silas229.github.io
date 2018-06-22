@@ -1,0 +1,200 @@
+@import "elements.css";
+@import "keyframes.css";
+
+:root {
+  --logo-size: 10em;
+  --container-background: #467365;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+body {
+  background: #293940;
+}
+
+.language, footer {
+  margin: 0 20%;
+}
+
+.language {
+  text-align: right;
+  font-family: 'Quicksand', sans-serif;
+  padding: 4px;
+}
+
+.language a~a {
+  border-left: 2px solid;
+  border-radius: 2px;
+  padding: 3px
+}
+
+.language a.active {
+  color: #bbb;
+  font-weight: 600;
+}
+
+.container {
+  background: var(--container-background);
+  border-radius: 6px;
+  margin: 6rem 20%;
+  padding-bottom: 1em;
+}
+
+/*.container>* {
+  position: relative;
+  top: -40px;
+}*/
+
+.container header {
+  background-color: #2e4d43;
+  padding:  1em;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: center;
+}
+
+.container header .logo {
+  display: inline-block;
+  background-color: #fff;
+  height: var(--logo-size);
+  border-radius: 50%;
+  border: 4px solid #fff;
+  /* position: relative; */
+  /* top: -40px; */
+  margin-top: -80px;
+  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.container header .logo img {
+  width: var(--logo-size);
+  border-radius: 50%;
+}
+
+.container header h1 {
+  font-size: 2.75rem;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 200ms both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) 200ms both;
+}
+
+.container header .lead {
+  font-style: italic;
+  font-family: 'Quicksand', sans-serif;
+  color: #bbb;
+}
+
+.container .social {
+  padding: 1em;
+  text-align: center;
+}
+
+.container .social div {
+  display: inline-block;
+  background-color: #fff;
+  padding: 8px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  -webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both;
+	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both;
+  margin: 0 6px;
+}
+
+.container .social div a {
+  color: var(--container-background);
+  font-size: 2em;
+}
+
+
+.container .content {
+  padding: 0 20%;
+}
+
+.container .greeting {
+  font-size: 47px;
+  font-weight: 300;
+  display: inline-block;
+  float: left;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+}
+
+.container p {
+  -webkit-animation: fade-in 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+	        animation: fade-in 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+}
+
+.container hr {
+  -webkit-animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 800ms both;
+	        animation: scale-up-hor-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 800ms both;
+  margin: 8px;
+}
+
+.container h2 {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  font-style: italic;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1000ms both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1000ms both;
+}
+
+footer {
+  padding: 4px;
+  text-align: right;
+}
+
+/* mobile */
+@media (max-width: 599px) {
+  .language, .container, footer {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
+  .container .greeting {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+
+  .container .content {
+    padding: 0 16px;
+  }
+}
+
+/* tablet portrait */
+@media (min-width: 600px) and (max-width: 899px) {
+  .language, .container, footer {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .container .greeting {
+    padding-left: 64px;
+  }
+
+  .container .content {
+    padding: 0 64px;
+  }
+}
+
+/* tablet landscape */
+@media (min-width: 900px) and (max-width: 1199px) {
+  .language, .container, footer {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .container .greeting {
+    padding-left: 92px;
+  }
+
+  .container .content {
+    padding: 0 92px;
+  }
+}

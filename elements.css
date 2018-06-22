@@ -1,0 +1,58 @@
+a {
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+  color: #bbb;
+}
+
+hr {
+  border: 2px solid #bbb;
+  border-radius: 2px;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+  [data-tooltip]:after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: #fff;
+    padding: 5px 15px;
+    color: #000;
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    border-radius        : 10px;
+    white-space: nowrap;
+    opacity: 0;
+     /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.4s ease;
+    -moz-transition   : all 0.4s ease;
+  }
+  [data-tooltip]:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #fff;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    /* At time of this creation, only Fx4 doing pseduo transitions */
+    -webkit-transition: all 0.2s ease;
+    -moz-transition   : all 0.2s ease;
+    opacity: 0;
+    left: 10%;
+    top: 90%;
+  }
+  [data-tooltip]:hover:after {
+     top: 130%;
+  }
+  [data-tooltip]:hover:before {
+    top: 120%;
+  }
+  [data-tooltip]:hover:after, [data-tooltip]:hover:before {
+    opacity: 1;
+  }
