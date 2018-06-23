@@ -1,3 +1,7 @@
+p {
+  margin-bottom: 6px;
+}
+
 a {
     text-decoration: none;
     transition: color 0.2s;
