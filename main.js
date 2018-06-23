@@ -38,14 +38,13 @@ $(document).ready(function(){
 
     $.getJSON( "https://www.silas229.de/api.php?projects="+language )
     .done(function( data ) {
-      var projects = [];
       var project;
       $.each(data, function(i, object) {
         if (object.newtab) {
-          object.url = 'https://silas229.de' + object.url;
+          object.url = 'https://www.silas229.de' + object.url;
         }
         project = '<a href="' + object.url +'" class="slider-element" target="_blank">';
-        project += '<img src="https://silas229.de/lib/img/' + object.icon_url + '-ico.png">';
+        project += '<img src="https://www.silas229.de/lib/img/' + object.icon_url + '-ico.png">';
         project += '<br>';
         project += '<span>' + object.tax + '</span>';
         project += '<h1>' + object.name +'</h1>';
