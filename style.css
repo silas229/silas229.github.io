@@ -3,7 +3,9 @@
 
 :root {
   --logo-size: 10em;
+  --body-background: #293940;
   --container-background: #467365;
+  --header-background: #2e4d43;
 }
 
 * {
@@ -54,7 +56,7 @@ body {
 }*/
 
 .container header {
-  background-color: #2e4d43;
+  background-color: var(--header-background);
   padding:  1em;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -148,9 +150,23 @@ body {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   font-style: italic;
-  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1000ms both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1000ms both;
+  -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
 }
+
+.container h2:nth-child(1) {animation-delay: 1s;}
+.container h2:nth-child(2) {animation-delay: 1.4s;}
+
+input, textarea, button {
+  -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+form *:nth-child(1) {animation-delay: 1.6s}
+form *:nth-child(2) {animation-delay: 1.7s}
+form *:nth-child(3) {animation-delay: 1.8s}
+form *:nth-child(6) {animation-delay: 1.9s}
+
 
 footer {
   padding: 4px;
@@ -174,6 +190,10 @@ footer {
   .container .content {
     padding: 0 16px;
   }
+
+  button {
+    width: 100%;
+  }
 }
 
 /* tablet portrait */
@@ -184,11 +204,14 @@ footer {
   }
 
   .container .greeting {
-    padding-left: 64px;
   }
 
   .container .content {
     padding: 0 64px;
+  }
+
+  button {
+    width: 100%;
   }
 }
 
@@ -200,7 +223,6 @@ footer {
   }
 
   .container .greeting {
-    padding-left: 92px;
   }
 
   .container .content {

@@ -16,6 +16,50 @@ hr {
   border-radius: 2px;
 }
 
+form {
+  display: block;
+  text-align: center;
+}
+
+input, textarea {
+  font-size: 0.8em;
+  border: 2px solid #ddd;
+  background: #fff;
+  padding: 0.9em;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 0.5em;
+  width: calc(100% - 1.8em - 4px);
+  color: var(--header-background);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--header-background);
+  outline: none;
+}
+
+input[required]:after, input.required:after {
+  content: '*';
+  color: #f00;
+}
+
+button {
+  font-size: 1em;
+  text-transform: uppercase;
+  border: 2px solid #ddd;
+  background: #fff;
+  color: #888;
+  line-height: 1em;
+  padding: 0.6em 0.9em;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--header-background);
+  /*border-color: var(--header-background);*/
+  color: #fff;
+}
+
 [data-tooltip] {
   position: relative;
 }
