@@ -16,7 +16,7 @@ $(document).ready(function(){
             slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: false,
-            autoplay: false
+            arrows: false
           }
         },
         {
