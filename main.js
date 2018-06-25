@@ -40,7 +40,7 @@ $(document).ready(function(){
     .done(function( data ) {
       var project;
       $.each(data, function(i, object) {
-        if (object.newtab) {
+        if (object.newtab == '0') {
           object.url = 'https://www.silas229.de' + object.url;
         }
         project = '<a href="' + object.url +'" class="slider-element" target="_blank">';
@@ -55,5 +55,16 @@ $(document).ready(function(){
       $(".slider").slick('removeSlide', 0);
       //$(".slider").html(projects);
     });
+
+    const crate = new Crate({
+      server: '226768293195808768',
+      channel: '226774461599318017'
+    })
+
+    if (language == 'de') { crate.notify( 'Hi!👋 Hinterlass doch eine Nachricht auf meinem Discord!😉' ) } else { crate.notify( "Hi!👋 Why don't you leave a message on my discord?😉" ) }
+    crate.on('signIn', data => {
+      console.log(`Gast als ${data.name} angemeldet`)
+    })
+
   }
 });
