@@ -112,13 +112,14 @@ body {
   width: 32px;
   height: 32px;
   -webkit-animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both;
-	        animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both;
+  animation: scale-up-hor-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 400ms both;
   margin: 0 6px;
 }
 
 .container .social div a {
   color: var(--container-background);
   font-size: 2em;
+  vertical-align: top;
 }
 
 
@@ -132,7 +133,8 @@ body {
   display: inline-block;
   float: left;
   -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
-	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+  animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) 600ms both;
+  margin-right:  8px;
 }
 
 .container p, table {
@@ -171,6 +173,7 @@ form *:nth-child(6) {animation-delay: 1.9s}
 footer {
   padding: 4px;
   text-align: right;
+  opacity:  0.6;
 }
 
 /* mobile */
@@ -185,6 +188,7 @@ footer {
     display: block;
     text-align: center;
     padding: 0;
+    margin: 0;
   }
 
   .container .content {
@@ -193,6 +197,16 @@ footer {
 
   button {
     width: 100%;
+  }
+
+  .container .social div {
+    padding: 24px;
+    height: 48px;
+    width: 48px;
+  }
+
+  .container .social div  a {
+    font-size: 3em;
   }
 }
 
@@ -203,15 +217,22 @@ footer {
     margin-right: 10%;
   }
 
-  .container .greeting {
-  }
-
   .container .content {
     padding: 0 64px;
   }
 
   button {
     width: 100%;
+  }
+
+  .container .social div {
+  padding:  16px;
+    height: 38px;
+    width: 38px;
+}
+
+  .container .social div  a {
+    font-size: 2.5em;
   }
 }
 
