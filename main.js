@@ -47,8 +47,8 @@ $(document).ready(function(){
         project += '<img src="https://www.silas229.de/lib/img/' + object.icon_url + '-ico.png">';
         project += '<br>';
         project += '<span>' + object.tax + '</span>';
-        project += '<h1>' + object.name +'</h1>';
-        project += '<p>' + object.description +'</p>';
+        project += '<h1 title="' + object.name  + '">' + object.name +'</h1>';
+        project += '<p title="' + object.description + '">' + object.description +'</p>';
         project += '</a>'
         $('.slider').slick('slickAdd',project);
       });
