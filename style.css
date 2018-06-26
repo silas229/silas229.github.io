@@ -30,8 +30,7 @@ body {
 
 .language a~a {
   border-left: 2px solid;
-  border-radius: 2px;
-  padding: 3px
+  padding: 3px;
 }
 
 .language a.active {
@@ -157,7 +156,7 @@ body {
 }
 
 .container h2:nth-child(1) {animation-delay: 1s;}
-.container h2:nth-child(2) {animation-delay: 1.4s;}
+.container h2:nth-child(3) {animation-delay: 1.4s;}
 
 input, textarea, button {
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -174,6 +173,25 @@ footer {
   padding: 4px;
   text-align: right;
   opacity:  0.6;
+}
+
+footer .language {
+  margin: 0;
+}
+
+footer a {
+  padding: 3px;
+}
+
+footer a img {
+  height: 10px;
+  border: 2px solid var(--container-background);
+  margin-right:  2px;
+  transition: border-color 0.2s;
+}
+
+footer a:hover img {
+  border-color: var(--header-background);
 }
 
 /* mobile */
