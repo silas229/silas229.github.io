@@ -1,4 +1,3 @@
-<<<<<<< current
 $(document).ready(function(){
   if (typeof language !== 'undefined') {
     $('.slider').slick({
@@ -70,7 +69,7 @@ $(document).ready(function(){
 
   }
 });
-=======
+
 $(document).ready(function(){
   if (typeof language !== 'undefined') {
     $('.slider').slick({
@@ -130,4 +129,3 @@ $(document).ready(function(){
     });
   }
 });
->>>>>>> before discard
