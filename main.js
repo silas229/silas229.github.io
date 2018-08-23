@@ -58,7 +58,8 @@ $(document).ready(function(){
 
     const crate = new Crate({
       server: '226768293195808768',
-      channel: '226774461599318017'
+      channel: '226774461599318017',
+      shard: 'https://cl1.widgetbot.io'
     })
 
     if (language == 'de') { crate.notify( 'Hi!👋 Hinterlass doch eine Nachricht auf meinem Discord!😉' ) } else { crate.notify( "Hi!👋 Why don't you leave a message on my discord?😉" ) }
