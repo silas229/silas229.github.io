@@ -43,7 +43,7 @@ $(document).ready(function(){
         if (object.newtab == '0') {
           object.url = 'https://www.silas229.de' + object.url;
         }
-        project = '<a href="' + object.url +'" class="slider-element" target="_blank">';
+        project = '<a title="' + object.description  + '" href="' + object.url +'" class="slider-element" target="_blank">';
         project += '<img src="https://www.silas229.de/lib/img/' + object.icon_url + '-ico.png">';
         project += '<br>';
         project += '<span>' + object.tax + '</span>';
