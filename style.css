@@ -218,13 +218,13 @@ footer a:hover img {
   }
 
   .container .social div {
-    padding: 24px;
-    height: 48px;
-    width: 48px;
+    padding: 12px;
+    height: 36px;
+    width: 36px;
   }
 
   .container .social div  a {
-    font-size: 3em;
+    font-size: 2em;
   }
 }
 
