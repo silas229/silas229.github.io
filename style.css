@@ -119,6 +119,7 @@ body {
   color: var(--container-background);
   font-size: 2em;
   vertical-align: top;
+  cursor: pointer;
 }
 
 
