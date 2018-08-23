@@ -44,7 +44,11 @@ $(document).ready(function(){
         if (object.newtab == '0') {
           object.url = 'https://www.silas229.de' + object.url;
         }
+<<<<<<< HEAD
         project = '<a title="' + object.description  + '" href="' + object.url +'" class="slider-element" target="_blank">';
+=======
+        project = '<a title="' + object.name  + '" href="' + object.url +'" class="slider-element" target="_blank">';
+>>>>>>> 5d773611cfd4d3137da1baf324d81202542537ad
         project += '<img src="https://www.silas229.de/lib/img/' + object.icon_url + '-ico.png">';
         project += '<br>';
         project += '<span>' + object.tax + '</span>';
