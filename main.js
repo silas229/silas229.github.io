@@ -36,7 +36,7 @@ $(document).ready(function(){
       ]
     });
 
-    $.getJSON( "https://www.silas229.de/api.php?projects="+language )
+    $.getJSON( "https://api.silas229.de/?projects="+language )
     .done(function( data ) {
       var project;
       $.each(data, function(i, object) {
