@@ -18,27 +18,27 @@ body {
   background: #293940;
 }
 
-.language, footer {
+.links, footer {
   margin: 0 20%;
 }
 
-.language {
+.links {
   text-align: right;
   font-family: 'Quicksand', sans-serif;
   padding: 4px;
 }
 
-.language a~a {
+.links a~a {
   border-left: 2px solid;
   padding: 3px;
 }
 
-.language a.active {
+.links a.active {
   color: #bbb;
   font-weight: 600;
 }
 
-.language a.disabled {
+.links a.disabled {
   cursor: not-allowed;
 }
 
@@ -176,7 +176,7 @@ footer {
   opacity:  0.6;
 }
 
-footer .language {
+footer .links {
   margin: 0;
 }
 
@@ -197,7 +197,7 @@ footer a:hover img {
 
 /* mobile */
 @media (max-width: 599px) {
-  .language, .container, footer {
+  .links, .container, footer {
     margin-left: 8px;
     margin-right: 8px;
   }
@@ -231,7 +231,7 @@ footer a:hover img {
 
 /* tablet portrait */
 @media (min-width: 600px) and (max-width: 899px) {
-  .language, .container, footer {
+  .links, .container, footer {
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -257,7 +257,7 @@ footer a:hover img {
 
 /* tablet landscape */
 @media (min-width: 900px) and (max-width: 1199px) {
-  .language, .container, footer {
+  .links, .container, footer {
     margin-left: 15%;
     margin-right: 15%;
   }
