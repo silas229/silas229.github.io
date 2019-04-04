@@ -2,7 +2,15 @@ i18next
 	.use(i18nextXHRBackend)
 	.use(i18nextBrowserLanguageDetector)
 	.init({
-		fallbackLng: ["en", "de"],
+		fallbackLng: {
+			'de-AT': ['de', 'en'],
+			'de-DE': ['de', 'en'],
+			'de-LI': ['de', 'en'],
+			'de-LU': ['de', 'en'],
+			'de-CH': ['de', 'en'],
+			'de': ['de', 'en'],
+			'default': ['en', 'de']
+		},
 		debug: false,
 		backend: {
 			loadPath: 'https://api.silas229.de/v2/translations/portfolio/{{lng}}',
