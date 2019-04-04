@@ -87,8 +87,9 @@ hr:hover {
   transform: scale(1.05);
 }
 .projects .project .icon {
-  width: 64px;
-  height: auto;
+  height: 64px;
+  width: auto;
+  justify-self: center;
 }
 .projects .project .title {
   margin: 0;
