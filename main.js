@@ -62,7 +62,7 @@
 				const projects = JSON.parse(request.responseText);
 				projects.forEach(function(project) {
 					wrapper.innerHTML += `
-          <a href="${ project.url }" class="project" target="_blank" title="${ project.name }" aria-label="${ project.name }">
+          <a href="${ project.url }" class="project" ${ project.newtab ? `target="_blank"` : `` } title="${ project.name }" aria-label="${ project.name }">
           <img src="https://cdn.silas229.de/projects/${ project.icon }.png" alt="" class="icon">
           <h1 class="title">${ project.name }</h1>
           <p class="description">${ project.description }</p>
