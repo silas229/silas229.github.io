@@ -36,10 +36,17 @@
 	
 	function updateContent() {
 		localize("body");
+		updateCopyright();
 		updateSwitch();
 		updateProjects();
 	}
 	
+	function updateCopyright() {
+		document.getElementById("copyright").innerHTML = i18next.t('footer.copyright', {
+			year: new Date().getFullYear()
+		})
+	}
+
 	function updateSwitch() {
 		const container = document.getElementsByClassName("languages")[0];
 		container.innerHTML = '';
