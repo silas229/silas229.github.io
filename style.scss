@@ -335,7 +335,7 @@ footer {
 }
 
 // Landscape phones
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
 	.contact input.half {
 		width: 100%;
 		float: none;
@@ -345,16 +345,23 @@ footer {
 		grid-template-columns: 1fr;
 	}
 
+	$edge: 10%;
+
 	.projects,
-	.contact,
+	.social,
 	.website {
-		margin-left: 10%;
-		margin-right: 10%;
+		margin-left: $edge;
+		margin-right: $edge;
+	}
+
+	footer {
+		padding-left: $edge;
+		padding-right: $edge;
 	}
 }
 
 // Portrait phones
-@media (max-width: 575.98px) {
+@media (max-width: 576px) {
 	.projects {
 		grid-template-columns: 1fr;
 
@@ -363,11 +370,18 @@ footer {
 		}
 	}
 
+	$edge: 1em;
+
 	.projects,
 	.social,
 	.website {
-		margin-left: 1em;
-		margin-right: 1em;
+		margin-left: $edge;
+		margin-right: $edge;
+	}
+
+	footer {
+		padding-left: $edge;
+		padding-right: $edge;
 	}
 }
 
