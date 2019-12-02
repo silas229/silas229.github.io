@@ -4,11 +4,6 @@
 		.use(i18nextBrowserLanguageDetector)
 		.init({
 			fallbackLng: {
-				'de-AT': ['de', 'en'],
-				'de-DE': ['de', 'en'],
-				'de-LI': ['de', 'en'],
-				'de-LU': ['de', 'en'],
-				'de-CH': ['de', 'en'],
 				'de': ['de', 'en'],
 				'default': ['en', 'de']
 			},
@@ -16,16 +11,14 @@
 			backend: {
 				loadPath: 'https://api.silas229.de/v2/translations/portfolio/{{lng}}',
 				crossDomain: true
-			},
-			interpolation: {
-				format: function(value, format) {
-					if(value instanceof Date) return moment(value).format(format);
-					return value;
-				}
 			}
 		}, function(err, t) {
 			
 			localize = new locI18next.init(i18next);
+
+			if (i18next.language.match(/de-/g)) i18next.changeLanguage('de');
+			if (i18next.language.match(/en-/g)) i18next.changeLanguage('en');
+
 			updateContent();
 			
 			i18next.on('languageChanged', () => {
