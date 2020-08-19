@@ -1,4 +1,7 @@
 (function () {
+	const apiHost = "https://api.silas229.name";
+	const cdnHost = "https://cdn.silas229.name";
+
 	i18next
 		.use(i18nextXHRBackend)
 		.use(i18nextBrowserLanguageDetector)
@@ -9,7 +12,7 @@
 			},
 			debug: false,
 			backend: {
-				loadPath: 'https://api.silas229.de/v2/translations/portfolio/{{lng}}',
+				loadPath: apiHost + '/v2/translations/portfolio/{{lng}}',
 				crossDomain: true
 			}
 		}, function(err, t) {
@@ -55,7 +58,7 @@
 		localize(".loading");
 		
 		const request = new XMLHttpRequest();
-		request.open('GET', "https://api.silas229.de/v2/projects/" + i18next.language, true);
+		request.open('GET', apiHost + "/v2/projects/" + i18next.language, true);
 		
 		request.onload = function() {
 			if (request.status >= 200 && request.status < 400) {
@@ -63,7 +66,7 @@
 				projects.forEach(function(project) {
 					wrapper.innerHTML += `
           <a href="${ project.url }" class="project" ${ project.newtab ? `target="_blank"` : `` } title="${ project.name }" aria-label="${ project.name }">
-          <img src="https://cdn.silas229.de/projects/${ project.icon }.png" alt="" class="icon">
+          <img src="${ cdnHost }/projects/${ project.icon }.png" alt="" class="icon">
           <h1 class="title">${ project.name }</h1>
           <p class="description">${ project.description }</p>
           <div class="tax"><div class="category">${ project.tax }</div></div>
