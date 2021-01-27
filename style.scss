@@ -231,7 +231,7 @@ hr {
 	}
 }
 
-.website {
+.cta {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-column-gap: 4px;
@@ -256,11 +256,11 @@ hr {
 		}
 
 		&:nth-child(1) {
-			background: linear-gradient(135deg, #B6D5EA, #E5F7FF);
+			background: linear-gradient(135deg, #5bc493, #b5c5bd);
 		}
 
 		&:nth-child(2) {
-			background: linear-gradient(135deg, #C3C3C3, #EEE);
+			background: linear-gradient(135deg, #FFB81E, #EEE);
 		}
 	}
 }
@@ -306,6 +306,7 @@ footer {
 	background-color: $bg-color;
 	text-align: right;
 	padding: 4px 20%;
+	margin-top: 1em;
 
 	p {
 		margin: 0;
